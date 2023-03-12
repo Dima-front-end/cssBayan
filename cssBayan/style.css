@@ -10,41 +10,41 @@ body {
 .title {
     display: flex;
     font-size: 40px;
-    margin: 1em 5em;
+    margin: 1em 7em;
 }
 .none {
     display: none;
 }
 main {
-    display: flex;
     flex-direction: column;
     gap: 2em;
 }
-.accordion .name1,
-.accordion .name2,
-.accordion .name3,
-.accordion .name4 {
+.name {
     letter-spacing: 1px;
     font-size: 35px;
     font-weight: 900;
     width: 100%;
     color: blue;
 }
-.accordion .mem {
+.mem {
     width: 0;
     opacity:0;
     transition: 1s;
-    margin-left: 20em !important;
+    margin-left: 15em !important;
     margin: .5em 0;
 }
 .accordion {
     border-top: 1px solid rgb(166, 166, 166);
-    border-bottom: 1px solid rgb(166, 166, 166);
-    padding-top: 1.5em;
+    padding-top: -1em;
+    padding: -2em 0;
     width: 80%;
     margin: 0 0 0 10%;
     align-items: center;
     cursor: pointer;
+}
+.border {
+    width: 80%;
+    margin: 0 0 0 10%;
 }
 .plus {
     width: 2em;
@@ -55,28 +55,49 @@ main {
     opacity:0;
     transition: 1s;
 }
+.xmark {
+    display: none;
+    width: 2em;
+    height: 2em;
+    align-items: center;
+    margin-right: 2em;
+    margin-top: .5em;
+}
 .flex-box {
     display: flex; 
     justify-content: space-between;
     gap: 12em;
     margin-left: 1em;
+    margin-top: 2em;
 }
-
 .accordion:hover .mem {
     opacity:1;
     transition: 1s;
-    width: 24em;
+    width: 18em;
+}
+.accordion:hover .xmark {
+    display: block;
 }
 .accordion:hover .plus {
+    display: none;
     opacity:1;
     transition: 1s;
 }
-.accordion:hover .name1 {
+.border:hover .name {
     color: black;
-}.accordion:hover .name2 {
+}
+.border:hover .accordion > .flex-box > .plus {
+    opacity:1;
+    transition: 1s;
+}
+.accordion.active > .mem {
+    opacity: 1;
+    transition: 1s;
+    width: 18em;
+}
+.accordion.active > .flex-box > .name {
     color: black;
-}.accordion:hover .name3 {
-    color: black;
-}.accordion:hover .name4 {
-    color: black;
+} 
+.accordion:active .name {
+    color: blue;
 }
