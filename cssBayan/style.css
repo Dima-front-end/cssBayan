@@ -4,9 +4,6 @@
     box-sizing: border-box;
     font-family: 'Heebo', sans-serif;
 }
-body {
-    height: 400em;
-}
 .title {
     display: flex;
     font-size: 40px;
@@ -100,4 +97,140 @@ main {
 } 
 .accordion:active .name {
     color: blue;
+}
+
+
+@media (max-width: 820px) {
+    .title {
+        display: flex;
+        font-size: 38px;
+        margin: 1em 7.5em;
+    }
+    .none {
+        display: none;
+    }
+    main {
+        flex-direction: column;
+        gap: 2em;
+    }
+    .name {
+        font-size: 18px;
+        font-weight: 900;
+        width: 100%;
+        color: blue;
+    }
+    .mem {
+        width: 0;
+        opacity:0;
+        transition: 1s;
+        margin-left: 6em !important;
+        margin: .5em 0;
+    }
+    .accordion {
+        border-top: 1px solid rgb(166, 166, 166);
+        padding-top: -1em;
+        padding: -2em 0;
+        width: 80%;
+        margin: 0 0 0 10%;
+        align-items: center;
+        cursor: pointer;
+    }
+    .border {
+        width: 80%;
+        margin: 0 0 0 10%;
+    }
+    .plus {
+        width: 1.5em;
+        height: 1.5em;
+        align-items: center;
+        margin-right: 2em;
+        margin-top: .5em;
+        opacity:0;
+        transition: 1s;
+    }
+    .xmark {
+        display: none;
+        width: 1.5em;
+        height: 1.5em;
+        align-items: center;
+        margin-right: 2em;
+        margin-top: .5em;
+    }
+    .flex-box {
+        display: flex; 
+        justify-content: space-between;
+        gap: 12em;
+        margin-left: 1em;
+        margin-top: 2em;
+    }
+}
+@media (max-width: 320px) {
+    .title {
+        display: flex;
+        font-size: 20px;
+        margin: 1em 5em;
+    }
+    .none {
+        display: none;
+    }
+    main {
+        flex-direction: column;
+        gap: 2em;
+    }
+    .name {
+        font-size: 14px;
+        font-weight: 600;
+        width: 100%;
+        color: blue;
+    }
+    .mem {
+        width: 0;
+        opacity:0;
+        transition: 1s;
+        margin: .5em 0;
+        margin-left: 0em !important;
+    }
+    .accordion {
+        border-top: 1px solid rgb(166, 166, 166);
+        padding-top: -1em;
+        padding: -2em 0;
+        width: 80%;
+        margin: 0 0 0 10%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .border {
+        width: 80%;
+        margin: 0 0 0 10%;
+    }
+    .plus {
+        width: 1em;
+        height: 1em;
+        align-items: center;
+        margin-right: 2em;
+        margin-top: .5em;
+        opacity:0;
+        transition: 1s;
+    }
+    .xmark {
+        display: none;
+        width: 1em;
+        height: 1em;
+        align-items: center;
+        margin-right: 2em;
+        margin-top: .5em;
+    }
+    .flex-box {
+        display: flex; 
+        justify-content: space-between;
+        gap: 1em;
+        margin-left: 1em;
+        margin-top: 2em;
+    }
+    .accordion:hover .mem {
+        opacity:1;
+        transition: 1s;
+        width: 9em;
+    }
 }
