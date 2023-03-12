@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Heebo', sans-serif;
 }
+body {
+    height: 400em;
+}
 .title {
     display: flex;
     font-size: 40px;
@@ -12,29 +15,68 @@
 .none {
     display: none;
 }
-hr {
-    width: 90%;
-    margin-left: 5%;
-    margin-bottom: 3em;
-}
 main {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    gap: 1em;
+    gap: 2em;
 }
-.accordion h2 {
+.accordion .name1,
+.accordion .name2,
+.accordion .name3,
+.accordion .name4 {
     letter-spacing: 1px;
     font-size: 35px;
-    margin-left: -15em !important; 
-    margin: 1em 0;
+    font-weight: 900;
+    width: 100%;
+    color: blue;
 }
-.accordion img {
-    width: 24em;
+.accordion .mem {
+    width: 0;
+    opacity:0;
+    transition: 1s;
+    margin-left: 20em !important;
+    margin: .5em 0;
 }
 .accordion {
-    border-top: 1px solid dimgray;
-    border-bottom: 1px solid dimgray;
+    border-top: 1px solid rgb(166, 166, 166);
+    border-bottom: 1px solid rgb(166, 166, 166);
+    padding-top: 1.5em;
     width: 80%;
     margin: 0 0 0 10%;
+    align-items: center;
+    cursor: pointer;
+}
+.plus {
+    width: 2em;
+    height: 2em;
+    align-items: center;
+    margin-right: 2em;
+    margin-top: .5em;
+    opacity:0;
+    transition: 1s;
+}
+.flex-box {
+    display: flex; 
+    justify-content: space-between;
+    gap: 12em;
+    margin-left: 1em;
+}
+
+.accordion:hover .mem {
+    opacity:1;
+    transition: 1s;
+    width: 24em;
+}
+.accordion:hover .plus {
+    opacity:1;
+    transition: 1s;
+}
+.accordion:hover .name1 {
+    color: black;
+}.accordion:hover .name2 {
+    color: black;
+}.accordion:hover .name3 {
+    color: black;
+}.accordion:hover .name4 {
+    color: black;
 }
